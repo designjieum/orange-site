@@ -32,7 +32,7 @@ export function WorksGallery({ label, heading }: { label: React.ReactNode; headi
       {/* 제목과 필터 탭의 시작 높이를 맞춤 */}
       <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
         {heading}
-        <FadeUp delay={0.08} className="-mx-[clamp(20px,4vw,40px)] lg:mx-0 lg:mt-[calc(2rem+0.2em)] lg:text-[clamp(1.75rem,2.6vw,2.375rem)]">
+        <FadeUp delay={0.08} className="-mx-[clamp(20px,4vw,40px)] lg:mx-0 lg:mt-[calc(2rem+0.2em)] lg:text-[clamp(1.75rem,1.333rem+1.39vw,2.375rem)]">
           <div
             role="group"
             aria-label="업종별 시공사례 보기"

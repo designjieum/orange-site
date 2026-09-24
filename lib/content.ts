@@ -29,17 +29,50 @@ export const site = {
     { text: "range " },
     { text: "AD", accent: true },
   ],
-  title: "오렌지애드컴퍼니 | 간판 · 현수막 · 인쇄물 제작 시공",
+  // 검색 결과 제목 (60자 이내 권장)
+  title: "오렌지애드컴퍼니 | 양주 간판 · 현수막 · 인쇄물 제작 시공",
+  // 검색 결과 설명 (80~120자 권장)
   description:
-    "간판·현수막·인쇄물까지, 상담부터 시공까지 한 번에. 전국 방문·출장 상담, 20시까지 상담 가능한 오렌지애드컴퍼니.",
-  url: "https://orange-ad.pages.dev", // [확인 필요] 실제 도메인
-  ogImage: "/images/og.jpg",
+    "경기 양주 간판 제작·시공 전문 오렌지애드컴퍼니. LED 채널간판·갈바간판·어닝부터 현수막·전단지·명함까지 한 곳에서 같은 톤으로. 전국 방문·출장 상담, 매일 20시까지 상담.",
+  // 카카오톡·SNS 공유 시 제목/설명 (짧고 행동을 유도하게)
+  shareTitle: "간판 · 현수막 · 인쇄물, 한 곳에서 한 번에 | 오렌지애드컴퍼니",
+  shareDescription: "지나가던 손님이 문을 열게 만드는 간판. 사진만 보내도 견적 상담해 드려요.",
+  url: "https://orange-site.pages.dev", // 도메인 구매 후 "https://orangead.com"으로 변경
+  ogImage: { src: "/images/og.jpg", alt: "오렌지애드컴퍼니 - 간판 · 현수막 · 인쇄물 제작 시공" },
+  keywords: [
+    "양주 간판",
+    "양주 간판 제작",
+    "의정부 간판",
+    "옥정 간판",
+    "경기 북부 간판",
+    "간판 제작",
+    "간판 시공",
+    "LED 채널간판",
+    "갈바간판",
+    "플렉스 간판",
+    "어닝",
+    "현수막 제작",
+    "실사출력",
+    "전단지 인쇄",
+    "명함 제작",
+    "리플렛",
+    "스티커 제작",
+    "종이자석",
+    "개업 간판",
+    "간판 교체",
+    "간판 A/S",
+  ],
+  // 검색엔진 소유 확인 코드 (각 서비스에서 발급받아 입력, 비워두면 출력 안 함)
+  verification: {
+    google: "", // Google Search Console
+    naver: "", // 네이버 서치어드바이저
+  },
 };
 
 export const contact = {
   phone: "0507-1318-5039",
   tel: "tel:050713185039",
-  sms: "sms:050713185039",
+  talktalk: "https://talk.naver.com/ct/w5zko2?frm=mnmb&frm=nmb_detail#nafullscreen", // 네이버 톡톡 상담
   kakao: "https://open.kakao.com/o/s9Texbmf", // 카카오톡 상담 채팅
   hours: "매일 09:00 – 20:00",
   email: "blue1170@naver.com",
@@ -56,6 +89,11 @@ export const business = {
   ceo: "김미경",
   registrationNo: "820-19-01536",
   address: "경기 양주시 고원2나길 40 1층 오렌지애드컴퍼니",
+  // 구조화 데이터(검색엔진·AI용) 주소
+  addressParts: { region: "경기도", locality: "양주시", street: "고원2나길 40 1층" },
+  // 방문·출장 상담 주요 지역 (검색엔진·AI가 서비스 지역을 이해하는 데 사용)
+  areaServed: ["양주", "의정부", "동두천", "서울", "경기", "인천", "전국"], // 시공사례 지역 기준
+  openingHours: { opens: "09:00", closes: "20:00" }, // 매일
 };
 
 export const nav = [
@@ -64,6 +102,9 @@ export const nav = [
   { label: "진행과정", href: "#process" },
   { label: "문의하기", href: "#contact" },
 ];
+
+// 모바일(768px 미만) 헤더 오른쪽에 버튼 대신 보이는 문구: [윗줄, 아랫줄(강조)]
+export const headerTagline = ["간판 · 현수막 · 인쇄물", "한 곳에서 한 번에"];
 
 /* ---------- Hero ---------- */
 export const hero = {
@@ -182,7 +223,7 @@ export const works = {
 export const processSection = {
   number: "04",
   eyebrow: "Process",
-  title: ["상담부터 시공까지,", "5단계면 충분합니다"],
+  title: ["상담부터 시공까지,", "5단계면 충분합니다."],
   description: "처음이셔도 괜찮아요. 단계마다 담당자가 먼저 안내해 드립니다.",
   steps: [
     { icon: MessageSquareText, title: "상담 · 견적", description: "전화나 사진으로 간편하게 상담하고 예상 견적을 받아보세요." },
@@ -197,7 +238,7 @@ export const processSection = {
 export const contactSection = {
   number: "05",
   eyebrow: "Contact",
-  title: ["개업일은 다가오는데", "간판이 아직이라면, 오늘 연락 주세요"],
+  title: ["개업일은 다가오는데", "간판이 아직이라면, 오늘 연락 주세요."],
   description: [
     "오렌지애드컴퍼니는 간판·현수막·인쇄물까지",
     "매장의 시작을 함께하는 종합 광고 전문 업체입니다.",
@@ -206,7 +247,7 @@ export const contactSection = {
   actions: [
     { key: "tel", label: "전화 상담", sub: contact.phone, href: contact.tel },
     { key: "kakao", label: "카카오톡 사진 견적", sub: "채팅으로 편하게", href: contact.kakao },
-    { key: "sms", label: "문자로 사진 보내기", sub: "사진만 보내도 OK", href: contact.sms },
+    { key: "talktalk", label: "톡톡으로 사진 견적", sub: "사진만 보내도 OK", href: contact.talktalk },
   ] as const,
   tipsTitle: "이렇게 보내주시면 더 정확해요",
   tips: ["가게 정면 전체가 보이는 사진", "원하시는 간판 크기 또는 위치", "참고하고 싶은 디자인 (선택)"],

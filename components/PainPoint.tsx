@@ -59,9 +59,9 @@ export function PainPoint() {
           <div className="flex flex-col items-center gap-6 rounded-[24px] border border-white/12 bg-[linear-gradient(180deg,rgb(255_255_255/0.035),rgb(255_255_255/0.01))] px-6 py-10 text-center md:flex-row md:gap-0 md:rounded-[28px] md:px-12 md:py-12 lg:px-16 md:text-left">
             <span
               aria-hidden
-              className="grid size-20 shrink-0 place-items-center rounded-3xl border border-white/12 bg-[linear-gradient(145deg,rgb(255_255_255/0.07),rgb(255_255_255/0.02))] text-orange shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] md:size-24"
+              className="grid size-14 shrink-0 place-items-center rounded-2xl border border-white/12 bg-[linear-gradient(145deg,rgb(255_255_255/0.07),rgb(255_255_255/0.02))] text-orange shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] sm:size-16 md:size-20 md:rounded-3xl lg:size-24"
             >
-              <AnswerIcon className="size-10 md:size-12" strokeWidth={1.5} />
+              <AnswerIcon className="size-7 sm:size-8 md:size-10 lg:size-12" strokeWidth={1.5} />
             </span>
             <span aria-hidden className="hidden h-[72px] w-px shrink-0 bg-white/15 md:mx-8 md:block lg:mx-12" />
             <p className="text-[clamp(1.25rem,2.1vw,1.875rem)] leading-[1.45] font-bold tracking-[-0.035em]">

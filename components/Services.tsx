@@ -101,7 +101,12 @@ function ServiceCard({ item, sizes, featured = false }: { item: Item; sizes: str
         {item.title}
       </h3>
       {"description" in item && (
-        <p className={`mt-1.5 text-white/80 md:mt-2 ${featured ? "text-base md:text-xl" : "text-sm md:text-base"}`}>
+        // 아이콘이 있는 작은 카드는 모바일에서 설명 생략
+        <p
+          className={`mt-1.5 text-white/80 md:mt-2 ${featured ? "text-base md:text-xl" : "text-sm md:text-base"} ${
+            Icon ? "max-md:hidden" : ""
+          }`}
+        >
           {item.description}
         </p>
       )}

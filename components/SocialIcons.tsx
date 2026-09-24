@@ -33,6 +33,30 @@ export function BlogIcon({ className }: IconProps) {
   );
 }
 
+export function TalkTalkIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden fill="none">
+      <path
+        d="M12 3.5c5.25 0 9.5 3.2 9.5 7.15 0 3.95-4.25 7.15-9.5 7.15-.7 0-1.38-.06-2.03-.17L5.2 20.3l.95-3.9C3.9 15.1 2.5 13 2.5 10.65 2.5 6.7 6.75 3.5 12 3.5Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+      <text
+        x="12"
+        y="12.9"
+        textAnchor="middle"
+        fontSize="6.4"
+        fontWeight="800"
+        fontFamily="Pretendard Variable, Pretendard, sans-serif"
+        fill="currentColor"
+      >
+        톡톡
+      </text>
+    </svg>
+  );
+}
+
 export function InstagramIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden fill="none" stroke="currentColor" strokeWidth="1.8">

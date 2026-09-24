@@ -9,6 +9,6 @@ export const btn = {
   sm: "h-10 px-5 text-sm",
 };
 
-/** 섹션 메인 타이틀 공통 스타일 (모든 섹션 h2) */
+/** 섹션 메인 타이틀 공통 스타일 (모든 섹션 h2): 1200px 이상 38px, 480px 이하 28px */
 export const sectionTitle =
-  "mt-6 text-[clamp(1.75rem,2.6vw,2.375rem)] leading-[1.4] font-extrabold tracking-[-0.035em] md:mt-8";
+  "mt-6 text-[clamp(1.75rem,1.333rem+1.39vw,2.375rem)] leading-[1.4] font-extrabold tracking-[-0.035em] md:mt-8";
