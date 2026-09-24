@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ORANGE AD 랜딩 페이지
 
-## Getting Started
+Next.js (App Router, TypeScript) + Tailwind CSS v4 정적 사이트. Cloudflare Pages 배포용.
 
-First, run the development server:
+## 개발 / 빌드
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # 결과물: out/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cloudflare Pages 설정
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Framework preset: Next.js (Static HTML Export)
+- Build command: `npm run build`
+- Build output directory: `out`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 수정 방법
 
-## Learn More
+- 문구 · 연락처 · 이미지 경로: `lib/content.ts` (`[확인 필요]` 표시 값은 실제 정보로 교체)
+- 섹션 컴포넌트: `components/`
 
-To learn more about Next.js, take a look at the following resources:
+## 이미지 (public/images/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| 파일 | 용도 | 권장 사이즈 |
+| --- | --- | --- |
+| `hero.jpg` | 히어로 배경 (야간 매장 전면, 간판 점등) | 1600×2000 (4:5 세로) |
+| `services/sign.jpg` | 서비스 · 간판/어닝 (큰 카드) | 1400×1200 |
+| `services/banner.jpg` | 서비스 · 현수막/실사출력 (가로 넓은 카드) | 1400×600 |
+| `services/print.jpg` | 서비스 · 전단지/명함/리플렛 | 900×650 |
+| `services/sticker.jpg` | 서비스 · 스티커/종이자석 | 600×650 |
+| `works/before.jpg` · `works/after.jpg` | 시공사례 비포/애프터 비교 (같은 구도로 촬영) | 1200×1200 (1:1) |
+| `works/work-01.jpg` ~ `work-12.jpg` | 시공사례 카드 12장 (업종별 3장) | 900×1200 (3:4 세로) |
+| `og.jpg` | 카카오톡 · SNS 공유 미리보기 | 1200×630 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+JPG, 장당 200KB 안팎 권장 (이미지 최적화가 꺼져 있어 원본이 그대로 전송됩니다).
+압축 전 원본은 `_originals/images/`에 보관합니다 (git·배포 제외).
