@@ -41,7 +41,8 @@ export const site = {
   url: "https://orangead.co.kr",
   // 검색 결과·AI가 같은 업체로 인식하도록 함께 쓰는 이름
   alternateNames: ["Orange AD", "오렌지애드", "OrangeAD"],
-  ogImage: { src: "/images/og.jpg", alt: "오렌지애드컴퍼니 - 간판 · 현수막 · 인쇄물 제작 시공" },
+  // 공유 이미지를 바꿀 땐 파일명도 바꿔야 카카오톡 등에 저장된 예전 이미지가 갱신됩니다 (og-2 → og-3 …)
+  ogImage: { src: "/images/og-2.jpg", alt: "오렌지애드컴퍼니 - 간판 · 현수막 · 인쇄물 제작 시공" },
   keywords: [
     "양주 간판",
     "양주 간판 제작",

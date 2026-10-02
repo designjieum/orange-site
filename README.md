@@ -32,7 +32,7 @@ npm run build   # 결과물: out/
 | `services/sticker.jpg` | 서비스 · 스티커/종이자석 | 600×650 |
 | `works/before.jpg` · `works/after.jpg` | 시공사례 비포/애프터 비교 (같은 구도로 촬영) | 1200×1200 (1:1) |
 | `works/work-01.jpg` ~ `work-12.jpg` | 시공사례 카드 12장 (업종별 3장) | 900×1200 (3:4 세로) |
-| `og.jpg` | 카카오톡 · SNS 공유 미리보기 | 1200×630 |
+| `og-2.jpg` | 카카오톡 · SNS 공유 미리보기 (교체 시 파일명 변경) | 1200×630 |
 
 JPG, 장당 200KB 안팎 권장 (이미지 최적화가 꺼져 있어 원본이 그대로 전송됩니다).
 압축 전 원본은 `_originals/images/`에 보관합니다 (git·배포 제외).
