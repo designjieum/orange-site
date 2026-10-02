@@ -5,6 +5,7 @@ export function StructuredData() {
   const abs = (path: string) => `${site.url}${path}`;
   const businessId = `${site.url}/#business`;
   const websiteId = `${site.url}/#website`;
+  const phoneIntl = `+82-${contact.phone.slice(1)}`; // 0507-… → +82-507-…
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -13,12 +14,13 @@ export function StructuredData() {
         "@type": "LocalBusiness",
         "@id": businessId,
         name: site.name,
-        alternateName: site.logo,
+        alternateName: site.alternateNames,
         description: site.description,
+        slogan: hero.title.join(" "),
         url: site.url,
-        logo: abs("/apple-touch-icon.jpg"),
+        logo: { "@type": "ImageObject", url: abs("/icon-192.png"), width: 192, height: 192 },
         image: [abs(site.ogImage.src), abs(hero.image.src)],
-        telephone: contact.phone,
+        telephone: phoneIntl,
         email: contact.email,
         address: {
           "@type": "PostalAddress",
@@ -40,7 +42,7 @@ export function StructuredData() {
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer service",
-          telephone: contact.phone,
+          telephone: phoneIntl,
           availableLanguage: "Korean",
         },
         knowsAbout: site.keywords,
@@ -70,6 +72,8 @@ export function StructuredData() {
         "@id": websiteId,
         url: site.url,
         name: site.name,
+        alternateName: site.alternateNames,
+        description: site.description,
         inLanguage: "ko-KR",
         publisher: { "@id": businessId },
       },
@@ -82,7 +86,8 @@ export function StructuredData() {
         inLanguage: "ko-KR",
         isPartOf: { "@id": websiteId },
         about: { "@id": businessId },
-        primaryImageOfPage: abs(site.ogImage.src),
+        primaryImageOfPage: { "@type": "ImageObject", url: abs(site.ogImage.src), width: 1200, height: 630 },
+        dateModified: new Date().toISOString(),
       },
       // 진행 과정
       {

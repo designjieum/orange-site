@@ -15,20 +15,29 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   category: "business",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "text/plain": [{ url: "/llms.txt", title: `${site.name} 업체 정보 (AI용 요약)` }] },
+  },
+  formatDetection: { telephone: true, email: false, address: false },
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
+  // 구글 검색 결과 파비콘은 48px 배수 권장 → ico(16·32·48) + png(48·192)
   icons: {
-    icon: { url: "/favicon.jpg", type: "image/jpeg" },
-    apple: { url: "/apple-touch-icon.jpg", type: "image/jpeg" },
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "/",
+    url: site.url,
     siteName: site.name,
     title: site.shareTitle,
     description: site.shareDescription,

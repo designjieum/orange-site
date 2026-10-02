@@ -37,7 +37,10 @@ export const site = {
   // 카카오톡·SNS 공유 시 제목/설명 (짧고 행동을 유도하게)
   shareTitle: "간판 · 현수막 · 인쇄물, 한 곳에서 한 번에 | 오렌지애드컴퍼니",
   shareDescription: "지나가던 손님이 문을 열게 만드는 간판. 사진만 보내도 견적 상담해 드려요.",
-  url: "https://orange-site.pages.dev", // 도메인 구매 후 "https://orangead.com"으로 변경
+  // 대표 도메인 (www.orangead.co.kr · orange-site.pages.dev 는 이 주소로 301 리다이렉트)
+  url: "https://orangead.co.kr",
+  // 검색 결과·AI가 같은 업체로 인식하도록 함께 쓰는 이름
+  alternateNames: ["Orange AD", "오렌지애드", "OrangeAD"],
   ogImage: { src: "/images/og.jpg", alt: "오렌지애드컴퍼니 - 간판 · 현수막 · 인쇄물 제작 시공" },
   keywords: [
     "양주 간판",
@@ -64,8 +67,8 @@ export const site = {
   ],
   // 검색엔진 소유 확인 코드 (각 서비스에서 발급받아 입력, 비워두면 출력 안 함)
   verification: {
-    google: "", // Google Search Console
-    naver: "", // 네이버 서치어드바이저
+    google: "", // Google Search Console → "HTML 태그" 방식의 content="..." 값만 입력
+    naver: "de691d6b98bd81436de08a32d399212f89ea8c34", // 네이버 서치어드바이저 → "HTML 태그" 방식의 content="..." 값만 입력
   },
 };
 

@@ -1,0 +1,10 @@
+# Cloudflare Pages 응답 헤더
+# 미리보기 주소(*.pages.dev)는 검색 노출 제외 → 대표 도메인 orangead.co.kr 만 색인
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
